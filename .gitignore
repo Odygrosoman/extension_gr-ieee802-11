@@ -10,3 +10,5 @@ examples/*.py
 *.pyo
 build*/
 examples/grc/*.py
+test
+test.pub
