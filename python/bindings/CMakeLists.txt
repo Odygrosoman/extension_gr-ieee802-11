@@ -35,6 +35,7 @@ list(APPEND ieee802_11_python_files
     ether_encap_python.cc
     extract_csi_python.cc
     frame_equalizer_python.cc
+    frame_equalizer_mimo_python.cc
     mac_python.cc
     mapper_python.cc
     parse_mac_python.cc

@@ -1,0 +1,55 @@
+id: ieee802_11_frame_equalizer_mimo
+label: IEEE 802.11 Frame Equalizer (SIMO 2Rx)
+category: '[ieee802_11]'
+
+templates:
+  imports: from gnuradio import ieee802_11
+  make: ieee802_11.frame_equalizer_mimo(${algo}, ${freq}, ${bw}, ${log}, ${debug})
+
+parameters:
+- id: algo
+  label: Equalizer
+  dtype: enum
+  options: [0, 1, 2, 3]
+  option_labels: [LS, LMS, COMB, STA]
+  default: 0
+
+- id: freq
+  label: Center Frequency (Hz)
+  dtype: float
+  default: 5.9e9
+
+- id: bw
+  label: Bandwidth (Hz)
+  dtype: float
+  default: 10e6
+
+- id: log
+  label: Log
+  dtype: bool
+  default: 'False'
+
+- id: debug
+  label: Debug
+  dtype: bool
+  default: 'False'
+
+inputs:
+- domain: stream
+  dtype: complex
+  vlen: 64
+  label: rx0
+
+- domain: stream
+  dtype: complex
+  vlen: 64
+  label: rx1
+
+outputs:
+-   domain: stream
+    dtype: byte
+    vlen: 48
+    multiplicity: '1'
+-   domain: message
+    id: symbols
+    optional: true

@@ -27,6 +27,7 @@ void bind_decode_mac(py::module& m);
 void bind_ether_encap(py::module& m);
 void bind_extract_csi(py::module& m);
 void bind_frame_equalizer(py::module& m);
+void bind_frame_equalizer_mimo(py::module& m);
 void bind_mac(py::module& m);
 void bind_mapper(py::module& m);
 void bind_parse_mac(py::module& m);
@@ -69,6 +70,7 @@ PYBIND11_MODULE(ieee802_11_python, m)
     bind_ether_encap(m);
     bind_extract_csi(m);
     bind_frame_equalizer(m);
+    bind_frame_equalizer_mimo(m);
     bind_mac(m);
     bind_mapper(m);
     bind_parse_mac(m);

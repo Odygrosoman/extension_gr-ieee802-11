@@ -40,6 +40,8 @@ public:
 
     std::vector<gr_complex> get_csi();
 
+    const gr_complex* get_H() const { return d_H; }
+
 protected:
     static const gr_complex LONG[64];
 

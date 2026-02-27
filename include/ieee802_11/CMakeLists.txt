@@ -17,6 +17,7 @@ install(FILES
     ether_encap.h
     extract_csi.h
     frame_equalizer.h
+    frame_equalizer_mimo.h
     mac.h
     mapper.h
     parse_mac.h
