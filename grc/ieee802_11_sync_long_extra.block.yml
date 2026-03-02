@@ -1,0 +1,41 @@
+id: ieee802_11_sync_long_extra
+label: WiFi Sync Long (Extra)
+category: '[IEEE802.11]'
+
+parameters:
+- id: sync_length
+  label: Sync Length
+  dtype: int
+  default: '240'
+
+- id: log
+  label: Log
+  dtype: bool
+  default: 'False'
+  options: ['True', 'False']
+  option_labels: [Enable, Disable]
+
+- id: debug
+  label: Debug
+  dtype: bool
+  default: 'False'
+  options: ['True', 'False']
+  option_labels: [Enable, Disable]
+
+inputs:
+- domain: stream
+  dtype: complex
+
+- domain: stream
+  dtype: complex
+  label: in delayed
+
+outputs:
+- domain: stream
+  dtype: complex
+
+templates:
+  imports: import ieee802_11
+  make: ieee802_11.sync_long_extra(${sync_length}, ${log}, ${debug})
+
+file_format: 1

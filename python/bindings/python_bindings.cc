@@ -32,6 +32,7 @@ void bind_mapper(py::module& m);
 void bind_parse_mac(py::module& m);
 void bind_signal_field(py::module& m);
 void bind_sync_long(py::module& m);
+void bind_sync_long_extra(py::module& m);
 void bind_sync_short(py::module& m);
 void bind_append_crc32(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
@@ -74,6 +75,7 @@ PYBIND11_MODULE(ieee802_11_python, m)
     bind_parse_mac(m);
     bind_signal_field(m);
     bind_sync_long(m);
+    bind_sync_long_extra(m);
     bind_sync_short(m);
     bind_append_crc32(m);
     // ) END BINDING_FUNCTION_CALLS

@@ -37,6 +37,7 @@ list(APPEND ieee802_11_sources
     parse_mac.cc
     signal_field_impl.cc
     sync_long.cc
+    sync_long_extra.cc
     sync_short.cc
     utils.cc
     viterbi_decoder/base.cc

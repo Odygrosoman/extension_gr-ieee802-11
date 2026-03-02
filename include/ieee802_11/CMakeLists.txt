@@ -22,6 +22,7 @@ install(FILES
     parse_mac.h
     signal_field.h
     sync_long.h
+    sync_long_extra.h
     sync_short.h
     append_crc32.h DESTINATION include/ieee802_11
 )

@@ -40,6 +40,7 @@ list(APPEND ieee802_11_python_files
     parse_mac_python.cc
     signal_field_python.cc
     sync_long_python.cc
+    sync_long_extra_python.cc
     sync_short_python.cc
     append_crc32_python.cc python_bindings.cc)
 
